@@ -16,7 +16,12 @@ jobs:
 
         - name: Set up Quarto
           uses: quarto-dev/quarto-actions/setup@v2
-
+        - name: Run arbitrary command
+          run: |
+            echo "Hello, world!"
+        - name: Run arbitrary Python script
+          run: |
+            python my_script.py
         - name: Render and Publish
           uses: quarto-dev/quarto-actions/publish@v2
           with:
